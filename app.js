@@ -29,7 +29,7 @@ function calculate() {
     var erorFound = false;
     
     for (let i = 0; i < text.length -1; i++) {
-        if (opt.includes(text[i]) && opt.includes(text[i + 1])) {
+        if (opt.includes(text[0]) || opt.includes(text[text.length -1])) {
             erorFound = true;
             break;
         }
