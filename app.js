@@ -1,7 +1,14 @@
 var display =document.getElementById("display")
 console.log(display);
 
+var resultShown = false;
+
 function press(vol){
+
+    if (resultShown) {
+        display.value = "";
+        resultShown = false;
+    }
     display.value += vol;
 }
 
@@ -25,7 +32,7 @@ function calculate() {
             display.value = "Error";
             return
     }
-
+ 
     var errorFound = false;
     
     for (var i = 0; i < text.length -1; i++) {
@@ -41,5 +48,7 @@ function calculate() {
     }else{
         display.value = eval(text)
     }
+
+     resultShown = true;
 }
 
