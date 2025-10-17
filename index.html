@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="cal">
+      <!-- display with id "display" (needed by your JS) -->
+      <input type="text" id="display" value="">
+
+      <!-- First row -->
+      <button type="button" onclick="cleandisplay()">AC</button>
+      <button type="button" onclick="delchar()">DEL</button>
+      <button type="button" onclick="press('%')">%</button>
+      <button type="button" class="operator" onclick="press('/')">/</button>
+
+      <!-- Second row -->
+      <button type="button" onclick="press('7')">7</button>
+      <button type="button" onclick="press('8')">8</button>
+      <button type="button" onclick="press('9')">9</button>
+      <button type="button" class="operator" onclick="press('*')">*</button>
+
+      <!-- Third row -->
+      <button type="button" onclick="press('4')">4</button>
+      <button type="button" onclick="press('5')">5</button>
+      <button type="button" onclick="press('6')">6</button>
+      <button type="button" class="operator" onclick="press('-')">-</button>
+
+      <!-- Fourth row -->
+      <button type="button" onclick="press('1')">1</button>
+      <button type="button" onclick="press('2')">2</button>
+      <button type="button" onclick="press('3')">3</button>
+      <button type="button" class="operator" onclick="press('+')">+</button>
+
+      <!-- Fifth row -->
+      <button type="button" style="grid-column: span 2;" onclick="press('0')">0</button>
+      <button type="button" onclick="press('.')">.</button>
+      <!-- '=' should call calculate() -->
+      <button type="button" class="operator" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="appp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
